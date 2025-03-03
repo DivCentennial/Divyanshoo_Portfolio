@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyanshoo Sinha - Software Engineer</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        /* Header */
+        header {
+            background: #0066cc;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #003366;
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav ul li a:hover {
+            color: #ddd;
+        }
+        
+        /* Sections */
+        section {
+            padding: 40px 0;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        section h2 {
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        /* About */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .profile-img {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+        
+        .profile-img img {
+            max-width: 100%;
+            border-radius: 50%;
+            border: 3px solid #0066cc;
+        }
+        
+        .profile-text {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-card {
+            background: #f9f9f9;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-img img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 10px;
+        }
+        
+        .project-links {
+            margin-top: 15px;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #0066cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Experience */
+        .experience-item {
+            margin-bottom: 30px;
+        }
+        
+        .experience-item h3 {
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .company {
+            font-weight: bold;
+            color: #0066cc;
+        }
+        
+        .experience-item .period {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #003366;
+        }
+        
+        /* Social Links */
+        .social-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            color: #0066cc;
+        }
+        
+        /* Footer */
+        footer {
+            background: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Divyanshoo Sinha</h1>
+            <p>Software Engineer | Mobile App Developer | AWS Certified Cloud Practitioner</p>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="profile-img">
+                    <!-- Add your photo here --> 
+                    <div style="width: 200px; height: 200px; background-color: #ddd; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;"><img src="Divyanshoo.jpg" alt="Divyanshoo Sinha" /></div>
+                </div>
+                <div class="profile-text">
+                    <p>
+                        AWS Certified Cloud Practitioner with 2.5 years of experience in software engineering, 
+                        specializing in mobile app development and frontend technologies. Skilled in both Android 
+                        and iOS development, with expertise in Kotlin, Swift, and cross-platform frameworks like 
+                        React Native and Flutter.
+                    </p>
+                    <p>
+                        Currently pursuing a Post Graduate Certificate in Mobile App Development at Centennial College, 
+                        with a previous Post Graduate Certificate in IT Project Management from Conestoga College and 
+                        a Bachelor of Technology in Information Technology from National Institute of Technology, Kurukshetra.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/divyanshoo-sinha-24b427144/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/DivCentennial" target="_blank">GitHub</a>
+                        <a href="https://leetcode.com/u/dsdivyanshoo/" target="_blank">LeetCode</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>Java</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>Swift</li>
+                        <li>Kotlin</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>React Native</li>
+                        <li>Swift UI (iOS)</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>Jetpack Compose (Android)</li>
+                        <li>Flutter</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & Databases</h3>
+                    <ul class="skill-list">
+                        <li>AWS</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>Datastore (Android)</li>
+                        <li>Room DB (Android)</li>
+                        <li>Core Data (iOS)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>Figma</li>
+                        <li>Balsamiq</li>
+                        <li>Mock flow</li>
+                        <li>Windows, macOS, Linux</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <!-- Project image or placeholder -->
+                        <div style="padding: 10px; text-align: center;"><img src="Android.png"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mobile Shopping App (Android)</h3>
+                        <p>A native Android shopping application developed with Kotlin and Room DB for data persistence.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DivCentennial/Team10_MAPD711_Project-Milestone2/tree/main" target="_blank">GitHub</a>
+                            <!-- <a href="#">Demo</a> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <!-- Project image or placeholder -->
+                        <div style="padding: 10px; text-align: center;"><img src="Apple.png"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mobile Shopping App (iOS)</h3>
+                        <p>A native iOS shopping application developed with Swift and Core Data for local storage.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DivCentennial/iOS_Milestone1_repo/tree/main" target="_blank">GitHub</a>
+                            <!-- <a href="#">Demo</a> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <!-- Project image or placeholder -->
+                        <div style="padding: 10px; text-align: center;"><img src="ReactNative.png"> </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Patient Management App</h3>
+                        <p>A cross-platform patient management application built with React Native using the MERN stack.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DivCentennial/ReactRangers_M2_Group4" target="_blank">GitHub</a>
+                            <!-- <a href="#">Demo</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            
+            <!-- Experience 1 -->
+            <div class="experience-item">
+                <h3>Software Engineer</h3>
+                <div class="company">HCL Technologies</div>
+                <div class="period">Dec. 2020 - Oct. 2022</div>
+                <ul>
+                    <li>Managed the company's cloud environment in AWS, optimizing resource allocation and performance</li>
+                    <li>Assisted the team in handling DDoS attacks using AWS Shield Advanced & WAF, reducing impact by 80%</li>
+                    <li>Used AWS cloud metric tools like CloudWatch to monitor memory and CPU usage and implemented auto-scaling</li>
+                    <li>Updated the Nokia confluence portal using HTML/CSS at regular intervals</li>
+                </ul>
+            </div>
+            
+            <!-- Experience 2 -->
+            <div class="experience-item">
+                <h3>Product Design Consultant</h3>
+                <div class="company">4DEx</div>
+                <div class="period">Jan. 2020 - Aug. 2020</div>
+                <ul>
+                    <li>Designed the Learning Management System portal using Figma and mock flow</li>
+                    <li>Engaged with clients to understand requirements and gather feedback for the LMS platform</li>
+                    <li>Tested and validated core functionalities, identifying and troubleshooting issues</li>
+                </ul>
+            </div>
+            
+            <!-- Experience 3 -->
+            <div class="experience-item">
+                <h3>Intern</h3>
+                <div class="company">APS Mind Technology Pvt Ltd</div>
+                <div class="period">May 2018 - Jul. 2018</div>
+                <ul>
+                    <li>Gained hands-on experience with the AWS cloud console, learning to operate and configure services</li>
+                    <li>Developed a strong foundation in cloud computing principles and their applications</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Divyanshoo Sinha. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
