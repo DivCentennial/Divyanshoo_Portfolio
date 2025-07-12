@@ -859,6 +859,60 @@ footer {
     animation: float 6s ease-in-out infinite;
 }
 
+/* Video Section */
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Video in Project Cards */
+.project-card .video-wrapper {
+    height: 220px;
+    padding-bottom: 0;
+}
+
+.project-card .video-wrapper iframe {
+    position: relative;
+    height: 100%;
+}
+
+.video-description {
+    padding: 30px;
+}
+
+.video-description h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.video-description p {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .about-content {
